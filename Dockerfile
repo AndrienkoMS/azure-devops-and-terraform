@@ -1,6 +1,6 @@
 # Get Base Image (Full .NET Core SDK)
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
-#FROM mcr.microsoft.com/dotnet/core/sdk:7.11 AS build-env
+#FROM mcr.microsoft.com/dotnet/core/sdk:7.11 AS build-env #7.11 - last version
 WORKDIR /app
 
 # Copy csproj and restore
