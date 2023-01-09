@@ -1,5 +1,5 @@
 ###########################
-# CONFIGURATION
+# CONFIGURATION #
 ###########################
 terraform {
   required_providers {
