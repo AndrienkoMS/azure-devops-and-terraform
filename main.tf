@@ -28,7 +28,7 @@ resource "azurerm_resource_group" "tf_test" {
   location = var.region
 }
 */
-terraform import azurerm_resource_group.Terraform_Test_2/subscriptions/7049381a-ef9b-4e4d-837f-1aae532a3c80/resourceGroups/tfmainrg
+terraform import azurerm_resource_group.Terraform_Test_2 /subscriptions/7049381a-ef9b-4e4d-837f-1aae532a3c80/resourceGroups/tfmainrg
 
 resource "azurerm_container_group" "tfcg_test" {
   name                = "weatherapi"
