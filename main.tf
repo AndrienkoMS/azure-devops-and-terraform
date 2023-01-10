@@ -23,19 +23,14 @@ terraform {
     }
 }
 
-variable "imagebuild" {
-  type = string
-  description = "Latest Image Build"
-}
-
-data "azurerm_resource_group" "tf_test" {
+resource "azurerm_resource_group" "tf_test" {
   name     = "tfmainrg"
   location = var.region
 }
 
 resource "azurerm_container_group" "tfcg_test" {
   name                = "weatherapi"
-  location            = var.region
+  location            = "eastus"
   resource_group_name = azurerm_resource_group.tf_test.name
 
   ip_address_type = "Public"
@@ -58,6 +53,10 @@ resource "azurerm_container_group" "tfcg_test" {
 ###########################
 # VARIABLES
 ###########################
+variable "imagebuild" {
+  type = string
+  description = "Latest Image Build"
+}
 
 variable "region" {
   type        = string
