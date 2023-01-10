@@ -37,7 +37,6 @@ resource "azurerm_container_group" "tfcg_test" {
   dns_name_label  = "andrienkomsapitf"
   os_type         = "Linux"
 
-
   container {
     name = "weatherapi"
       image = "andrienkoms/weatherapi:${var.imagebuild}"
@@ -69,7 +68,3 @@ variable "prefix" {
   description = "prefix for naming"
   default     = "tacos"
 }
-
-###########################
-# commands
-###########################
